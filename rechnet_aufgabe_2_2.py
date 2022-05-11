@@ -39,35 +39,43 @@ class Quadrat:
     def setValue(self,length):
         self.lenght=float(input("Enter the lenght: "))
 
- 
     
     
 class GeometrieRechner:
-    def __init__(self,figur):
+    def __init__(self):
          self.setFigur()
          
     def setFigur(self):
+        figur=None
+        
         self.figur=str(input("choose the figure: "))
-        if self.figure == 'Kreis':
+        if figur == 'Kreis':
             
+            self.figur=Kreis()           
             
-        elif figure == 'Quadrat':
+        elif figur == 'Quadrat':
+             
+             self.figur= Quadrat()
         
-        elif figure == 'Rechteck':    
-        
-
+        elif figur == 'Rechteck':
+             
+            self.figur = Rechteck()  
         else:
             
           print('Diese Figur kenne ich nicht!')
 
-    def getFlaeche():
+    def getFlaeche(self):
+        return self.figur.getFlaeche() 
         
-    def getUmfang():
         
- 
- 
+    def getUmfang(self):
+        return self.figur.getUmfang()
+    
+    
 
-   
-     figure = input('Welche geometrischen Figur soll berechnet werden? ')
 
+Calculate=GeometrieRechner()
+Calculate.setFigur()
+print("Fleache", Calculate.getFlaeche())
+print("Umfang",Calculate.getUmfang())
         
