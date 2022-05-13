@@ -3,24 +3,24 @@ from pickletools import markobject
 
 class Auto:
     def __init__(self,marke,preis,model,baujahr):
-        self.marke=marke
-        self.preis=preis
-        self.model=model
-        self.bauhajr=baujahr        
+        self.__marke=marke
+        self.__preis=preis
+        self.__model=model
+        self.__bauhajr=baujahr        
     
     def setMarke(self,marke):
-        self.marke= marke         
+        self.__marke= marke         
    
         
     def setPreis(self,preis):    
-        self.preis=preis 
+        self.__preis=preis 
         
     
     def setModel(self,Model):          
-        self.model=Model
+        self.__model=Model
         
     def SetBaujahr(self,baujahr):   
-        self.baujahr=baujahr     
+        self.__baujahr=baujahr     
        
         
     def getMarke(self): 
